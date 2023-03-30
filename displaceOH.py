@@ -32,10 +32,10 @@ with open(filename, "r") as file:
 steps = np.arange(-0.5, 1.525, 0.025) # give the range and increments in Ångstrøm to displace the H
                                         #from the Eq-structure
 #%%
-eq-distance = a #replace a with the eq-distance in OH bond
+eq_distance = a #replace a with the eq-distance in OH bond
 
 for step in steps:
-    data_i = filedata.replace(str(eq-distance), str(round(eq-distance+step,8)))
+    data_i = filedata.replace(str(eq_distance), str(round(eq_distance+step,8)))
 
     with open(filename.replace("eq", str(round(step,3))), 'w') as file:
         file.write(data_i)
